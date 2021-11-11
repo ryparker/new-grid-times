@@ -87,16 +87,20 @@ const LoginActionGroup = styled.div`
   display: none;
 
   @media ${QUERIES.laptopAndUp} {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: revert;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
     justify-self: end;
     align-self: end;
-    gap: 8px;
   }
 `;
 
 const SubLink = styled.a`
+  position: absolute;
+  margin-top: 8px;
+  width: 100%;
+  text-align: center;
   text-decoration: underline;
   color: var(--color-gray-900);
   font-style: italic;

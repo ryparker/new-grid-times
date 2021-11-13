@@ -51,10 +51,12 @@ const Wrapper = styled.div`
 
   --padding: 16px;
 
-  @media ${QUERIES.laptopAndUp} {
-    display: grid;
-    grid-template-columns: 50% 50%;
+  @media ${QUERIES.tabletAndUp} {
+    grid-template-columns: minmax(0px, auto);
     gap: var(--padding);
+  }
+  @media ${QUERIES.laptopAndUp} {
+    grid-template-columns: 1fr minmax(0px, 1fr);
   }
 `;
 
@@ -71,14 +73,10 @@ const SportsSection = styled.section``;
 const SportsStories = styled.div`
   display: grid;
   gap: var(--padding);
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(calc(50% - (var(--padding) * 2)), 1fr)
-  );
 
   @media ${QUERIES.tabletAndUp} {
+    grid-template-columns: revert;
     display: flex;
-    max-width: calc(100vw - (var(--padding) * 2));
     overflow: auto;
     padding-bottom: 8px;
 
@@ -89,6 +87,7 @@ const SportsStories = styled.div`
   }
 
   @media ${QUERIES.laptopAndUp} {
+    grid-template-columns: 1fr 1fr;
     border-left: 1px solid var(--color-gray-300);
     padding-left: var(--padding);
   }

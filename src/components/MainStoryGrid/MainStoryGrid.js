@@ -68,7 +68,7 @@ const Wrapper = styled.div`
     grid-template-areas:
       'main-story secondary-stories opinion-stories'
       'main-story advertisement advertisement';
-    grid-template-columns: 4fr 3fr 2fr;
+    grid-template-columns: 5fr 4fr 3fr;
     gap: 16px 0;
   }
 `;
@@ -131,6 +131,7 @@ const OpinionSection = styled.section`
     border-left: 1px solid var(--color-gray-300);
     padding-left: 16px;
     margin-left: 16px;
+    margin-top: -8px;
   }
 `;
 

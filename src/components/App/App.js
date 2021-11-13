@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <MaxWidthWrapper as="main">
+      <MaxWidthWrapper as='main'>
         <MainStoryGrid />
         <SpecialtyStoryGrid />
       </MaxWidthWrapper>

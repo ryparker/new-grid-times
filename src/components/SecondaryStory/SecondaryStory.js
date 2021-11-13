@@ -27,6 +27,10 @@ const Wrapper = styled.article`
     display: flex;
     flex-direction: column;
   }
+
+  @media ${QUERIES.laptopAndUp} {
+    display: grid;
+  }
 `;
 
 const Image = styled.img`
